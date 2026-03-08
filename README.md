@@ -12,13 +12,30 @@ Welcome to the world of static website generators! This is a fully-fledged tutor
 
 2. Navigate to the directory where you would like your website to be stored.
 
-3. Start a new Pelican project by running the command ``pelican-quickstart``, then answer the questions asked by the terminal.
+3. Start a new Pelican project by running the command ``pelican-quickstart``, then answer the questions asked by the terminal. The image below should match your terminal, bar any opinionated questions like the name of your website.
 
 ![assets/image.png](assets/image.png)
 
-4. Make a new file named ``index.md`` or any other appropriate name in the ``content`` folder.
+4. Make a new file named ``index.md``, or by any other appropriate name. We will be creating articles for our website.
 
-5. At the top of the 
+5. Paste the following text into the top of ``index.md`` (or the file you just created):
+
+```
+Title: Resume
+Date: March 5, 2026
+```
+
+This provides the *metadata*, data meant for use by the SSG. The title should be the name of your article, and the date should be the publishing date of the article.
+
+6. Write the contents of your article using Markdown. If you do not know how to use Markdown, [The Markdown Guide is available and is a nifty guide to use.](https://www.markdownguide.org/basic-syntax/). Once you are done with writing, we will move on to generating the website with Pelican.
+
+7. Generate your website by running ``pelican content`` in your terminal. This will generate the website from the ``.md`` files located in your ``content`` folder. The ``.html`` and ``.css`` files that compose your website will be located in a new folder called ``output``.
+
+8. Start a web server by running ``pelican --listen``, which will allow you to host your website locally on your computer.
+
+9. Preview your website by pasting ``localhost:8000`` in your web browser, or hold control and click on the local site link in your terminal (seen in the image below).
+
+![assets/pelicanlisten.png](assets/pelicanlisten.png)
 
 # Prerequisites
 Access to a Linux terminal. The resources here are possible to install on other platforms (Windows and Mac), but the instructions here do not describe installation on any platform other than a Linux distribution that uses ``apt``.
@@ -43,7 +60,7 @@ Access to a Linux terminal. The resources here are possible to install on other 
 
 5. Start a local web server by running ``pelican --listen`` to preview the website.
 
-6. Navigate to ``localhost:8000`` in your web browser, or *ctrl + click* on the local site link in your terminal.
+6. Navigate to ``localhost:8000`` in your web browser, or hold control and click on the local site link in your terminal.
 
 # External Resources
 - [The Markdown Guide](https://www.markdownguide.org/) is an excellent resource as a reference guide for Markdown.
@@ -58,14 +75,20 @@ Access to a Linux terminal. The resources here are possible to install on other 
 ## Why is Markdown better than writing raw HTML?
 Raw HTML is harder to read compared to Markdown. See this small snippet of the resume in HTML:
 ```html
-todo
+<h2>University of Manitoba (2023 - Present)</h2>
+<ul>
+  <li>GPA: Alot</li>
+  <li>Studying computer science.</li>
+</ul>
 ```
 and compare it to its equivalent in Markdown:
 ```md
-todo
+## University of Manitoba (2023 - Present)
+- GPA: Alot
+- Studying computer science.
 ```
 
-You can see that the Markdown snippet is much easier to parse by a human. Of course writing in Raw HTML is possible to do, but at least for myself Markdown has proven to be an easier way of writing content to serve on a website.
+The Markdown snippet is much easier to parse by a human. It even remains elegant to read in its raw text form, unlike HTML which is littered with tags. Writing in Raw HTML is possible to do, but you will find Markdown to be easier to write in as you write more complex web pages and content.
 
 ## I changed the Markdown version of my resume, so why don’t I see the changes when I refresh the website in my browser?
 Update the website by running ``pelican .`` in your website directory before refreshing the website. If you are hosting a local web server with ``pelican --listen``, end the server by pressing ``ctrl+c`` in the terminal before updating the website.
@@ -73,7 +96,7 @@ Update the website by running ``pelican .`` in your website directory before ref
 # Credits
 ## Contributors
 I would like to thank the following:
-- Ashley, who helped review the formatting and contents of this README and the resume.
+- Ashley and Marco, who are my group members for COMP 2600.
 - Andrew Etter, whose book *Modern Technical Writing* helped to improve the prose of this README.
 - Tristan Miller, the professor of COMP 2600, who taught me how to use Pelican.
 - Peter Vu, the teaching assistant of COMP 2600, who helped me in class during the workshop.
