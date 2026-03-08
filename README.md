@@ -52,15 +52,15 @@ Access to a Linux terminal. The resources here are possible to install on other 
 
 5. Install the theme by running ``pelican-themes --install pelican-themes/waterspill-en``.
 
-6. Run ``pelican-themes --list --verbose``. Note the directory of waterspill-en.
+6. Run ``pelican-themes --list --verbose``. Copy the directory of ``waterspill-en``.
 
-7. 
+7. Change the theme directory of the website by going into ``pelicanconf.py`` in the directory, going to ``THEME``, and pasting whatever you copied, replacing ``/usr/lib/python3/dist-packages/pelican/themes/waterspill-en`` inside the quotation marks.
 
-4. Compile the website into HTML by running ``pelican content``, which will be stored in ``/output``.
+8. Compile the website into HTML by running ``pelican content``, which will be stored in ``/output``.
 
-5. Start a local web server by running ``pelican --listen`` to preview the website.
+9. Start a local web server by running ``pelican --listen`` to preview the website.
 
-6. Navigate to ``localhost:8000`` in your web browser, or hold control and click on the local site link in your terminal.
+10. Navigate to ``localhost:8000`` in your web browser, or hold control and click on the local site link in your terminal.
 
 # External Resources
 - [The Markdown Guide](https://www.markdownguide.org/) is an excellent resource as a reference guide for Markdown.
