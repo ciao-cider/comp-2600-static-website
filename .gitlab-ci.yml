@@ -15,5 +15,5 @@ pages:
     - make publish
   artifacts:
     paths:
-      - public/
+      - output/
   environment: production
