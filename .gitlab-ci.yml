@@ -13,6 +13,8 @@ pages:
     - apk add --update --no-cache make subversion
     - pip install -r requirements.txt
     - make publish
+  publish:
+    - output/
   artifacts:
     paths:
       - output/
