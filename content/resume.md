@@ -1,10 +1,13 @@
 Title: Resume
-Date: February 10, 2026
+Date: March 5, 2026
 
 # Rafael Santiago
 B.Sc Computer Science student
+
 Phone: XXXXXXXXX
+
 Address: XXX XXXXX XXX
+
 Reliable, hard-working student who is skilled.
 # Experience
 ## Wienerpeg (June 2023 - September 2023)
