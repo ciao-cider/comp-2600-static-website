@@ -14,7 +14,7 @@ pages:
     - pip install -r requirements.txt
     - make publish
   publish:
-    - output/
+    - output
   artifacts:
     paths:
       - output/
